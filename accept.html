@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row m-5">
+            <div class="col-md-12">
+                <h2>CV Generator</h2>
+                </hr>
+
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-7">
+                <h3>Please fill out your details</h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control" id="email" name="email">
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="">Phone</label>
+                        <input type="text" class="form-control" id="Phone" name="Phone">
+
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="">About You</label>
+                        <textarea type="text" class="form-control" id="summary" name="summary"></textarea>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label for="">Degree</label>
+                        <input type="text" class="form-control" id="degree" name="degree">
+                    </div>
+
+
+                    <div class="form-group mb-2">
+                        <label for="">Skills</label>
+                        <textarea type="text" class="form-control" id="skills" name="skills"></textarea>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="" c>Education</label>
+                        <textarea type="text" class="form-control" id="school" name="school"></textarea>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label for="" c>Previous Work</label>
+                        <textarea type="text" class="form-control" id="previous_work" name="previous_work"></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
